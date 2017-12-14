@@ -3,7 +3,8 @@ CREATE TABLE [dbo].[Categories]
 [CategoryID] [int] NOT NULL IDENTITY(1, 1),
 [CategoryName] [nvarchar] (15) COLLATE Latin1_General_CI_AS NOT NULL,
 [Description] [ntext] COLLATE Latin1_General_CI_AS NULL,
-[Picture] [image] NULL
+[Picture] [image] NULL,
+[TestCol] [nchar] (10) COLLATE Latin1_General_CI_AS NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
 ALTER TABLE [dbo].[Categories] ADD CONSTRAINT [PK_Categories] PRIMARY KEY CLUSTERED  ([CategoryID]) ON [PRIMARY]
